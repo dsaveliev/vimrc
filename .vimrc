@@ -1,6 +1,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" !!!IMPORTANT!!! - for bottom border: mvim ~/.gtkrc-2.0
+" !!!IMPORTANT!!!
+" For bottom border:
+" ~/.gtkrc-2.0
 " ~/.config/gtk-3.0/gtk.css
+"
 " @define-color YOUR_BACKGROUND_COLOR #rrggbb;
 "
 " window#vim-main-window {
@@ -185,19 +188,19 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " => Fonts and Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Font
-set guifont=Hack\ Regular\ 11
+set guifont=Menlo\ for\ Powerline:h16
 
 " Enable syntax highlighting
 syntax enable
 
 " Colorscheme
- set background=light
- "colorscheme PaperColor
+set background=light
 " set background=dark
 
-set termguicolors
-colorscheme github
+"set termguicolors
 
+colorscheme PaperColor
+"colorscheme github
 "colorscheme solarized
 "colorscheme gruvbox
 "colorscheme onedark
@@ -232,6 +235,7 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
+let g:go_version_warning = 0
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 "autocmd FileType go nmap <leader>t  <Plug>(go-test)
 "autocmd FileType go nmap <leader>gb  <Plug>(go-build)
@@ -261,8 +265,6 @@ Plug 'mileszs/ack.vim'
 Plug 'ervandew/supertab'
 
 " Color plugins
-"Plug 'xolox/vim-misc'
-"Plug 'xolox/vim-colorscheme-switcher'
 Plug 'altercation/vim-colors-solarized'
 Plug 'romainl/Apprentice'
 Plug 'chriskempson/base16-vim'
@@ -275,7 +277,7 @@ Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'endel/vim-github-colorscheme'
 Plug 'tomasiser/vim-code-dark'
 Plug 'sickill/vim-monokai'
-"Plug 'tomasr/molokai'
+Plug 'tomasr/molokai'
 Plug 'fatih/molokai'
 Plug 'NLKNguyen/papercolor-theme'
 
@@ -296,9 +298,12 @@ Plug 'fatih/vim-go'
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-cucumber'
+Plug 'slim-template/vim-slim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'posva/vim-vue'
 Plug 'mxw/vim-jsx'
+Plug 'dag/vim-fish'
 " Plug 'vim-erlang/vim-erlang-runtime'
 " Plug 'vim-erlang/vim-erlang-compiler'
 " Plug 'vim-erlang/vim-erlang-omnicomplete'
